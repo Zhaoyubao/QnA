@@ -1,0 +1,30 @@
+<div class="row" id="nav">
+    <a href="#/main">Home</a>
+    <a href="#/answer/{{ question._id }}">Answer this Question</a>
+    <button id="logout" ng-click="logout()">Logout</button>
+</div>
+<div id="show">
+    <h2>{{ question.question }}</h2>
+    <h5>{{ question.description }}</h5>
+    <table>
+        <thead>
+            <tr>
+                <th width="600"></th>
+                <th width="100"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="answer in answers | orderBy:'-likes' track by answer._id">
+                <td>
+                    <b>{{ answer.user }}:</b>
+                    <p>{{ answer.answer }}</p>
+                    <p>{{ answer.details }}</p>
+                </td>
+                <td>
+                    <b>{{ answer.likes }}</b>
+                    <button id="like" class="button-primary" ng-click="addLikes(answer._id)">Like!</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,27 @@
+<div class="row" id="nav">
+    <h3>Welcome! <span>{{ user }}</span></h3>
+    <button id="logout" ng-click="logout()">Sign Out</button>
+</div>
+<div id="main">
+    <a id="addQ" href="#/question">Add a Question</a>
+    <input id="search" type="text" placeholder="search..." ng-model="search.question">
+    <table>
+        <thead>
+            <tr>
+                <th width="500">Question</th>
+                <th width="100">Answers</th>
+                <th width="200">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="question in questions | filter:search track by question._id">
+                <td>{{ question.question }}</td>
+                <td ng-bind="question._answers.length"></td>
+                <td>
+                    <a href="#/question/{{ question._id }}">Show</a>
+                    <a href="#/answer/{{ question._id }}">Answer</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

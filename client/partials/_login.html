@@ -1,0 +1,11 @@
+<h1>Q & A</h1>
+<form id="login" name="loginForm" ng-submit="login()" onkeydown="if(event.keyCode == 13) return false" novalidate>
+    <label>Name:</label>
+    <input type="text" name="name" ng-pattern="/^[a-zA-Z\s]+$/" ng-model="user.name" required>
+    <button class="button-primary">Enter</button>
+
+    <div class="error" ng-show="loginForm.$submitted || loginForm.name.$touched">
+        <p ng-show="loginForm.name.$error.required"><span>&#9888;</span> Please input your name</p>
+        <p ng-show="loginForm.name.$error.pattern"><span>&#9888;</span> Name should contain only letters</p>
+    </div>
+</form>

@@ -1,0 +1,22 @@
+{
+  "name": "Beltexam",
+  "description": "",
+  "main": "server.js",
+  "authors": [
+    "Yubao Zhao <zhaoyubao1981@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "angular-cookies": "^1.5.8"
+  }
+}

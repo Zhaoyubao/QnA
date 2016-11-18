@@ -1,0 +1,19 @@
+<div class="row" id="nav">
+    <a href="#/main">Home</a>
+    <button id="logout" ng-click="logout()">Logout</button>
+</div>
+<form id="add" name="qForm" ng-submit="addQuestion()" onkeydown="if(event.keyCode == 13) return false" novalidate>
+    <h3>New Question</h3>
+    <label>Question</label>
+    <textarea name="content" ng-model="question.question" ng-minlength="10" required></textarea>
+
+    <div id="error" ng-show="qForm.$submitted || qForm.content.$touched">
+        <p ng-show="qForm.content.$error.required"><span>&#9888;</span> The question couldn't be empty</p>
+        <p ng-show="qForm.content.$error.minlength"><span>&#9888;</span> Too short! Must be at least 10 characters long</p>
+    </div>
+
+    <label>Description(optional)</label>
+    <textarea ng-model="question.description"></textarea>
+    <a href="#/main">Cancel</a>
+    <button class="button-primary">Submit</button>
+</form>

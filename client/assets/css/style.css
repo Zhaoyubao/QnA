@@ -1,0 +1,158 @@
+/*_login.html*/
+h1 {
+    margin-top: 20px;
+    margin-left: 50px;
+}
+form#login {
+    width: 420px;
+    margin: 100px auto;
+}
+    #login label {
+        width: 60px;
+        font-size: 1.4em;
+        display: inline;
+        margin-right: 10px;
+    }
+    #login input {
+        width: 220px;
+        height: 40px;
+        font-size: 1.2em;
+        outline: none;
+        margin-right: 15px;
+    }
+    #login button {
+        font-size: 0.9em;
+        margin-left: 10px;
+    }
+    input:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0px 100px #fff inset;
+    }
+        .error p {
+            color: orangered;
+            font-size: 1.1em;
+            font-style: italic;
+            margin-left: 75px;
+        }
+/****************************************************************/
+/*_main.html*/
+div#nav {
+    width: 100%;
+    border-bottom: 1px solid silver;
+    padding: 3px 0;
+}
+    #nav h3 {
+        width: 500px;
+        text-transform: capitalize;
+        margin-left: 30px;
+        display: inline-block;
+    }
+        h3 span {
+            color: #1EAEDB;
+            font-style: italic;
+            margin-left: 10px;
+        }
+    button#logout {
+        width: 10%;
+        font-size: 1em;
+        float: right;
+        margin: 10px 30px 0 0;
+    }
+    button#logout:hover {
+        box-shadow: 0 0 8px silver;
+    }
+div#main {
+    width: 1000px;
+    margin: 30px auto;
+}
+    a#addQ {
+        font-size: 1.5em;
+    }
+    #main input {
+        width: 160px;
+        font-size: 1.2em;
+        margin-left: 700px;
+        display: block;
+    }
+    #main table {
+        font-size: 1.2em;
+        margin-top: 20px;
+    }
+        td a {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+/****************************************************************/
+/*_question.html*/
+    div#nav a:first-of-type {
+        margin-left: 50px;
+    }
+    div#nav a {
+        font-size: 1.5em;
+        margin-right: 20px;
+    }
+form#add {
+    width: 450px;
+    margin: 50px 0 0 50px;
+}
+    #add h3 {
+        color: #1EAEDB;
+    }
+    #add p {
+        font-size: 1.6em;
+        font-style: italic;
+    }
+    #add label {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+        margin-top: 15px;
+    }
+    #add textarea {
+        font-family: arial;
+        font-size: 1.2em;
+        width: 450px;
+        height: 100px;
+        overflow: auto;
+    }
+    #add a, #add button {
+        display: inline-block;
+        margin-top: 10px;
+    }
+    #add a {
+        font-size: 1.3em;
+        margin-left: 280px;
+        margin-right: 25px;
+    }
+    div#error p {
+        color: orangered;
+        font-size: 1em;
+        font-style: italic;
+        padding: 0;
+        margin: 0;
+        /*margin-left: 75px;*/
+    }
+/****************************************************************/
+/*_showQuestion.html*/
+div#show {
+    margin: 20px 0 0 50px;
+    float: none;
+}
+    #show h2 {
+        color: #1EAEDB;
+    }
+    #show h5 {
+        font-style: italic;
+    }
+    #show table td b {
+        color: #1EAEDB;
+        font-style: italic;
+        font-size: 1.2em;
+    }
+    #show table td > p:first-of-type {
+        font-size: 1.2em;
+        font-weight: 400;
+        margin: 20px 0 10px 0;
+    }
+    button#like {
+        margin-left: 10px;
+    }

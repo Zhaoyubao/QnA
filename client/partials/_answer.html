@@ -1,0 +1,21 @@
+<div class="row" id="nav">
+    <a href="#/main">Home</a>
+    <a href="#/question/{{ question._id }}">Go Back to Question</a>
+    <button id="logout" ng-click="logout()">Logout</button>
+</div>
+<form id="add" name="aForm" ng-submit="addAnswer()" onkeydown="if(event.keyCode == 13) return false" novalidate>
+    <h3>{{ question.question }}</h3>
+    <p>{{ question.description }}</p>
+    <label>Your Answer</label>
+    <textarea name="content" ng-model="answer.answer" ng-minlength="5" required></textarea>
+
+    <div id="error" ng-show="aForm.$submitted || aForm.content.$touched">
+        <p ng-show="aForm.content.$error.required"><span>&#9888;</span> The answer couldn't be empty</p>
+        <p ng-show="aForm.content.$error.minlength"><span>&#9888;</span> Too short! Must be at least 5 characters long</p>
+    </div>
+
+    <label>Supporting details for your answer(optional)</label>
+    <textarea ng-model="answer.details"></textarea>
+    <a href="#/main">Cancel</a>
+    <button class="button-primary">Submit</button>
+</form>
