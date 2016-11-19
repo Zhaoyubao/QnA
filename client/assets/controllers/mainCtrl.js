@@ -7,11 +7,7 @@ app.controller('mainCtrl', ['$scope', '$location', '$cookies', 'qnaFactory', fun
         $location.url('/login');
     }
 
-    function getQuestions() {
-        QF.getQuestions()
-            .then( (res) => $scope.questions = res.data )
-            .catch( (err) => console.log(`Error: ${err}`) )
-    }
-    getQuestions();
-
+    QF.getQuestions()
+        .then( (res) => $scope.questions = res.data )
+        .catch( (err) => console.log(`Error: ${err}`) )
 }])

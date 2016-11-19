@@ -10,12 +10,12 @@ app.config( ($routeProvider) => {
             templateUrl: '_main.html',
             controller: 'mainCtrl'
         })
-        .when('/question', {
-            templateUrl: '_question.html',
-            controller: 'questionCtrl'
-        })
         .when('/question/:id', {
             templateUrl: '_showQuestion.html',
+            controller: 'questionCtrl'
+        })
+        .when('/question', {
+            templateUrl: '_question.html',
             controller: 'questionCtrl'
         })
         .when('/answer/:questionId', {

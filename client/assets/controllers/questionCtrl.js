@@ -1,4 +1,5 @@
 app.controller('questionCtrl', ['$scope', '$routeParams', '$location', '$cookies', 'qnaFactory', function($scope, $routeParams, $location, $cookies, QF) {
+
     if(!$cookies.get('user'))  $location.url('/login');
 
     $scope.logout = function() {
@@ -15,9 +16,7 @@ app.controller('questionCtrl', ['$scope', '$routeParams', '$location', '$cookies
         .catch( (err) => console.log(`Error: ${err}`) )
     }
 
-    if($routeParams.id) {
-        getQuestion();
-    }
+    if($routeParams.id)  getQuestion();
 
     $scope.addLikes = function(answerId) {
         QF.updateLikes(answerId)
@@ -28,11 +27,8 @@ app.controller('questionCtrl', ['$scope', '$routeParams', '$location', '$cookies
     $scope.addQuestion = function() {
         if ($scope.qForm.$valid) {
             QF.addQuestion($scope.question)
-                .then( (res) => {
-                    $location.url('/main');
-                })
+                .then( (res) => $location.url('/main') )
                 .catch( (err) => console.log(`Error: ${err}`) )
         }
     }
-
 }])

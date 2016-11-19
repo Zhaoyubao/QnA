@@ -22,6 +22,5 @@ app.factory('qnaFactory', ['$http', function($http){
         return $http.get(`/answers/${id}`);
     }
 
-
     return factory;
 }])
