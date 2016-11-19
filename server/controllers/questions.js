@@ -10,7 +10,7 @@ module.exports = {
     create(req, res) {
         Question.create(req.body, (err, question) => {
             if(err)  console.log(`Error adding question: ${err}`);
-            else  res.json(question);
+            else  res.json(true);
         })
     },
     show(req, res) {

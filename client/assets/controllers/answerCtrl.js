@@ -16,7 +16,7 @@ app.controller('answerCtrl', ['$scope', '$routeParams', '$location', '$cookies',
             let answer = $scope.answer;
             answer.user = user;
             QF.addAnswer(answer, $routeParams.questionId)
-                .then( (res) => $location.url('/main') )
+                .then( () => $location.url('/main') )
                 .catch( (err) => console.log(`Error: ${err}`) )
         }
     }

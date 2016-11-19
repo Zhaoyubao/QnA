@@ -27,7 +27,7 @@ app.controller('questionCtrl', ['$scope', '$routeParams', '$location', '$cookies
     $scope.addQuestion = function() {
         if ($scope.qForm.$valid) {
             QF.addQuestion($scope.question)
-                .then( (res) => $location.url('/main') )
+                .then( () => $location.url('/main') )
                 .catch( (err) => console.log(`Error: ${err}`) )
         }
     }
