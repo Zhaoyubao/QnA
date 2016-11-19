@@ -15,7 +15,9 @@ app.controller('questionCtrl', ['$scope', '$routeParams', '$location', '$cookies
         .catch( (err) => console.log(`Error: ${err}`) )
     }
 
-    getQuestion();
+    if($routeParams.id) {
+        getQuestion();
+    }
 
     $scope.addLikes = function(answerId) {
         QF.updateLikes(answerId)

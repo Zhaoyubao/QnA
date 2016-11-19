@@ -16,7 +16,7 @@
         <tbody>
             <tr ng-repeat="question in questions | filter:search track by question._id">
                 <td>{{ question.question }}</td>
-                <td ng-bind="question._answers.length"></td>
+                <td>{{ question._answers.length }}</td>
                 <td>
                     <a href="#/question/{{ question._id }}">Show</a>
                     <a href="#/answer/{{ question._id }}">Answer</a>

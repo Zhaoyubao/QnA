@@ -6,7 +6,7 @@ app.factory('qnaFactory', ['$http', function($http){
     }
 // ===============================================
     factory.getQuestion = function(id) {
-        return $http.get(`questions/${id}`);
+        return $http.get(`/questions/${id}`);
     }
     factory.getQuestions = function() {
         return $http.get('/questions');
